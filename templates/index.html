@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Agentic Honeypot (Live)</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Agentic Honey-Pot – Live Scam Intelligence</h1>
+      <div class="meta">
+        <span id="case"></span>
+        <span id="status"></span>
+        <select id="modeSel">
+          <option value="HUMAN" selected>Human Scammer (You type)</option>
+          <option value="SIMULATED">Simulated Scammer (Auto)</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Live Conversation</h2>
+        <div id="chat" class="chat"></div>
+
+        <div class="inputBar">
+          <input id="msg" placeholder="Type scammer message here..." />
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Live Risk</h2>
+        <div class="box">
+          <div><b>Score:</b> <span id="score">0</span>/100</div>
+          <div><b>Level:</b> <span id="level">LOW</span></div>
+          <div><b>Verdict:</b> <span id="verdict">SAFE</span></div>
+          <div><b>Scam Detected:</b> <span id="detected">false</span></div>
+        </div>
+
+        <h2>Extracted Artifacts</h2>
+        <div id="artifacts" class="list"></div>
+
+        <h2>Turn Reasoning (Judge View)</h2>
+        <div id="reasoning" class="list"></div>
+
+        <h2>Intel Graph (Growing)</h2>
+        <div id="graph" class="list"></div>
+
+        <h2>Controls</h2>
+        <div class="controls">
+          <button id="resetBtn">Reset</button>
+          <button id="reportBtn">Download JSON</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
